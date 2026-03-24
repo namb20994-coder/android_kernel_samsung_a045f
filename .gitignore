@@ -1,0 +1,14 @@
+# Build artifacts
+*.o
+*.cmd
+scripts/basic/fixdep
+scripts/kconfig/conf
+scripts/kconfig/zconf.lex.c
+scripts/kconfig/zconf.tab.c
+scripts/kconfig/zconf.tab.o
+.config
+.config.old
+
+# Large archives
+*.tar.gz
+toolchain/
