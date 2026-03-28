@@ -1,0 +1,20 @@
+# Bỏ qua thư mục build và rác
+out/
+debian/
+*.deb
+*.buildinfo
+*.changes
+*.tar.xz
+*.tar.gz
+*.gz
+
+# Bỏ qua các file object và binary trong kernel
+*.o
+*.ko
+*.order
+*.mod.c
+*.symtypes
+vmlinux
+System.map
+.config
+.config.old

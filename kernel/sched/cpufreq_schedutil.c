@@ -356,6 +356,13 @@ unsigned long schedutil_cpu_util(int cpu, unsigned long util_cfs,
 	return min(max, util);
 }
 
+unsigned long cpu_util_freq(int cpu)
+{
+    /* Mượn giá trị util_avg của CFS - Cách an toàn nhất để schedutil chạy được trên 4.19 */
+    struct rq *rq = cpu_rq(cpu);
+    return rq->cfs.avg.util_avg;
+}
+
 static unsigned long sugov_get_util(struct sugov_cpu *sg_cpu)
 {
 	struct rq *rq = cpu_rq(sg_cpu->cpu);
